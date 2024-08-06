@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "a010fc0e127c3fbe",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ca251366d3886be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2ed978bfa32e25d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Agregasi_groupby_danhaving.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "238bc85d107e981e",
+            "type": "leaf",
+            "state": {
+              "type": "mk-uri-view",
+              "state": {
+                "path": "https://www.make.md/static/latest.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74996843d75689b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "51703cd29f1a1f80",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f4d6deeb609af1e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "30c70a76b309baf4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dc83490ec38fe7bf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "30cc686dc12b43f4",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "9a9447e631807dcf",
+    "type": "split",
+    "children": [
+      {
+        "id": "4088504fe69620c2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "13824eb2037d9c58",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Agregasi_groupby_danhaving.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "05e6a83494281634",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Agregasi_groupby_danhaving.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b02131df3ea64f8d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "87d02cf639d2b245",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Agregasi_groupby_danhaving.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Buka peralih cepat": false,
+      "graph:Buka tampilan grafik": false,
+      "canvas:Buat kanvas baru": false,
+      "daily-notes:Buka catatan hari ini": false,
+      "templates:Masukkan template": false,
+      "command-palette:Buka palet perintah": false
+    }
+  },
+  "active": "b2ed978bfa32e25d",
+  "lastOpenFiles": [
+    "Agregasi_groupby_danhaving.pdf",
+    "Tags",
+    "Agregasi_groupby_danhaving.md",
+    "Asset/Screenshot 2024-08-04 222436.png",
+    "Asset/Screenshot 2024-08-04 221554.png",
+    "Asset/Screenshot 2024-08-04 221101.png",
+    "Asset/Screenshot 2024-08-04 222518.jpg",
+    "Asset",
+    "New folder",
+    "Screenshot 2024-08-04 222518.jpg",
+    "Tanpa judul.md"
+  ]
+}
