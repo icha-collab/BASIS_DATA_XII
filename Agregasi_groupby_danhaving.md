@@ -27,8 +27,7 @@ Ketentuan tabel: tipe data dan constraintnya
 
 Hasil struktur tabel pegawai
 
-![[Asset/gambar1.jpg]]
-
+![[Asset/gambar1.JPG]]
 - `desc pegawai`;` 
 Kueri ini digunakan untuk menampilkan struktur tabel `pegawai`, termasuk nama kolom, tipe data, batasan null/bukan null, batasan kunci, nilai default, dan informasi tambahan. Output kueri ini memberikan gambaran umum yang jelas tentang skema tabel, yang berguna untuk memahami data yang tersimpan dalam tabel.
 
@@ -49,7 +48,7 @@ Jadi Constraint dalam tabel database digunakan untuk menjaga integritas dan kons
 
 Hasil data tabel Pegawai
 
-![[Asset/gambar2.jpg]]
+![[Asset/gambar2.JPG]]
 
 - `SELECT * FROM pegawai;` Ini adalah query untuk menampilkan semua kolom dan baris dari tabel `pegawai`.
 - Hasil keluaran menunjukkan 9 baris data yang berisi informasi lengkap mengenai para pegawai, termasuk NIP, NDep, NBlk, JK, Alamat, Telp, Jabatan, Gaji, dan NoCab.
