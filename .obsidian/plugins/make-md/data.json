@@ -42,7 +42,8 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/"
+    "/",
+    "//Asset"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",

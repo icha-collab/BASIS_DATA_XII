@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b2ed978bfa32e25d",
+            "id": "238bc85d107e981e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -16,16 +16,6 @@
                 "file": "Agregasi_groupby_danhaving.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "238bc85d107e981e",
-            "type": "leaf",
-            "state": {
-              "type": "mk-uri-view",
-              "state": {
-                "path": "https://www.make.md/static/latest.md"
               }
             }
           }
@@ -88,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9a9447e631807dcf",
@@ -166,15 +155,19 @@
       "command-palette:Buka palet perintah": false
     }
   },
-  "active": "b2ed978bfa32e25d",
+  "active": "238bc85d107e981e",
   "lastOpenFiles": [
+    "Asset/gambar2.jpg",
+    "Asset/Screenshot 2024-08-04 221554.png",
+    "Asset/gambar1.jpg",
+    "gambar2.jpg",
+    "Asset/Screenshot 2024-08-04 221101.png",
+    "gambar1.jpg",
+    "Asset/Screenshot 2024-08-04 222518.jpg",
+    "Agregasi_groupby_danhaving.md",
     "Agregasi_groupby_danhaving.pdf",
     "Tags",
-    "Agregasi_groupby_danhaving.md",
     "Asset/Screenshot 2024-08-04 222436.png",
-    "Asset/Screenshot 2024-08-04 221554.png",
-    "Asset/Screenshot 2024-08-04 221101.png",
-    "Asset/Screenshot 2024-08-04 222518.jpg",
     "Asset",
     "New folder",
     "Screenshot 2024-08-04 222518.jpg",
