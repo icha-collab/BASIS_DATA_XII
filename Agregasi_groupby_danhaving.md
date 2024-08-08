@@ -27,13 +27,13 @@ Ketentuan tabel: tipe data dan constraintnya
 
 Hasil struktur tabel pegawai
 
-![[Asset/gambar1.JPG]]
+![](Asset/gambar1.JPG)
 - `desc pegawai`;` 
 Kueri ini digunakan untuk menampilkan struktur tabel `pegawai`, termasuk nama kolom, tipe data, batasan null/bukan null, batasan kunci, nilai default, dan informasi tambahan. Output kueri ini memberikan gambaran umum yang jelas tentang skema tabel, yang berguna untuk memahami data yang tersimpan dalam tabel.
 
 - `NIP (Nomor Induk Pegawai)`: Bidang ini adalah tipe data integer dan bertindak sebagai kunci utama untuk tabel. Bidang ini tidak boleh null, yang berarti bahwa setiap baris dalam tabel harus memiliki nilai NIP yang unik.
 - `NDep (Nama Departemen)`: Ini adalah kolom varchar yang menyimpan nama departemen. Kolom ini tidak boleh null, yang berarti bahwa setiap karyawan harus dikaitkan dengan suatu departemen.
-- `NBlk (Nama Blok)`: Ini adalah kolom varchar yang menyimpan nama blok. Kolom ini tidak boleh null, yang berarti bahwa setiap karyawan harus dikaitkan dengan blok.
+- `NBlk (Nama belakang)`: Ini adalah kolom varchar yang menyimpan nama belakang Kolom ini tidak boleh null, yang berarti bahwa setiap karyawan harus dikaitkan dengan nama belakang.
 - `JK (Jenis Kelamin)`: Ini adalah kolom enum yang menyimpan jenis kelamin karyawan, dengan kemungkinan nilai 'L' (Laki-laki) atau 'P' (Perempuan). Kolom ini tidak boleh null, yang berarti bahwa setiap karyawan harus memiliki jenis kelamin yang ditentukan.
 - `Alamat`: Ini adalah kolom teks yang menyimpan alamat karyawan. Kolom ini tidak boleh kosong, yang berarti setiap karyawan harus memiliki alamat.
 - `Telp (Telepon)`: Ini adalah kolom varchar yang menyimpan nomor telepon karyawan. Kolom ini tidak boleh kosong dan harus unik, yang berarti setiap karyawan harus memiliki nomor telepon yang unik.
