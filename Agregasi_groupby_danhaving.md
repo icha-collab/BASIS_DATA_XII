@@ -27,7 +27,7 @@ Ketentuan tabel: tipe data dan constraintnya
 
 Hasil struktur tabel pegawai
 
-![](Asset/gambar1.JPG)
+![[gambar1.jpg|550]]
 - `desc pegawai`;` 
 Kueri ini digunakan untuk menampilkan struktur tabel `pegawai`, termasuk nama kolom, tipe data, batasan null/bukan null, batasan kunci, nilai default, dan informasi tambahan. Output kueri ini memberikan gambaran umum yang jelas tentang skema tabel, yang berguna untuk memahami data yang tersimpan dalam tabel.
 
@@ -62,3 +62,112 @@ Hasil data tabel Pegawai
 5. Rentang gaji pegawai berada di antara Rp1.725.000,- hingga Rp6.250.000,-.
 
 Secara keseluruhan, tabel `pegawai`ini menyediakan informasi yang cukup lengkap mengenai para pegawai beserta detail-detail terkait.
+
+
+# PENJELASAN LAINNYA :
+
+```SQL
+SELECT COUNT(NIP) AS JumlahPegawai, COUNT(Jabatan) AS JumlahJabatan FROM pegawai;
+```
+
+ ![[Asset/gambar_hilang.jpg|550]]
+
+1. **SELECT COUNT(NIP) AS JumlahPegawai**:
+    
+    - **`SELECT`**: Klausa ini digunakan untuk memilih kolom atau hasil perhitungan yang ingin ditampilkan dalam output query.
+    - **`COUNT(NIP)`**: Fungsi agregasi `COUNT` menghitung jumlah baris di mana kolom `NIP` tidak bernilai `NULL`. Ini berarti fungsi ini menghitung jumlah pegawai yang terdaftar dalam tabel `pegawai`.
+    - **`AS JumlahPegawai`**: Alias `JumlahPegawai` digunakan untuk memberi nama pada hasil perhitungan `COUNT(NIP)`. Nama ini akan muncul sebagai judul kolom dalam hasil query.
+    
+2. **COUNT(Jabatan) AS JumlahJabatan**:
+    
+    - **`COUNT(Jabatan)`**: Sama seperti `COUNT(NIP)`, fungsi `COUNT(Jabatan)` menghitung jumlah baris di mana kolom `Jabatan` tidak bernilai `NULL`. Ini berarti fungsi ini menghitung berapa kali data di kolom `Jabatan` memiliki nilai, yang bisa merepresentasikan jumlah jabatan yang diisi di tabel `pegawai`.
+    - **`AS JumlahJabatan`**: Alias `JumlahJabatan` digunakan untuk memberi nama pada hasil perhitungan `COUNT(Jabatan)`. Nama ini akan muncul sebagai judul kolom dalam hasil query.
+
+3.  **FROM pegawai**:
+    
+    - **`FROM`**: Klausa ini menentukan tabel yang akan digunakan untuk mengambil data, yaitu tabel `pegawai`.
+    - Dalam konteks ini, tabel `pegawai` berisi data pegawai, termasuk informasi tentang `NIP` dan `Jabatan`.
+
+### Kesimpulan
+
+- **Tujuan Query**: Query ini dirancang untuk menghitung dan menampilkan dua hal:
+    
+    1. Jumlah total pegawai (`JumlahPegawai`) berdasarkan perhitungan kolom `NIP`.
+    2. Jumlah total jabatan (`JumlahJabatan`) yang terdaftar dalam tabel `pegawai` berdasarkan kolom `Jabatan`.
+    
+- **Fungsi `COUNT`**: `COUNT(NIP)` menghitung jumlah pegawai yang memiliki `NIP`, sedangkan `COUNT(Jabatan)` menghitung jumlah entri jabatan yang terdaftar dalam tabel, dengan masing-masing hasil diberi alias untuk memudahkan interpretasi.
+    
+- **Hasil Akhir**: Hasil query ini akan menampilkan satu baris dengan dua kolom: `JumlahPegawai` dan `JumlahJabatan`, yang masing-masing menunjukkan total pegawai dan total jabatan yang ada di tabel `pegawai`.
+
+
+---
+
+
+```SQL 
+SELECT COUNT(NIP) AS JumlahPegawai
+FROM pegawai 
+WHERE NoCab = 'C102';
+	```
+
+![[gambar_hilang2.PNG]]
+
+1. **SELECT COUNT(NIP) AS JumlahPegawai**:
+    - **`SELECT`**: Ini adalah klausa yang digunakan untuk menentukan kolom apa saja yang ingin ditampilkan dalam hasil query.
+    - **`COUNT(NIP)`**: Fungsi `COUNT` digunakan untuk menghitung jumlah baris yang memenuhi kriteria tertentu. Dalam hal ini, fungsi `COUNT(NIP)` menghitung jumlah baris di mana kolom `NIP` (Nomor Induk Pegawai) memiliki nilai yang tidak `NULL`.
+    - **`AS JumlahPegawai`**: Kata kunci `AS` digunakan untuk memberikan alias pada hasil fungsi `COUNT`. Alias `JumlahPegawai` ini digunakan untuk memberi nama kolom hasil perhitungan, sehingga dalam hasil query, kolom ini akan diberi label "JumlahPegawai".
+    
+2. **FROM pegawai**:
+    - **`FROM`**: Klausa ini digunakan untuk menentukan tabel mana yang akan digunakan dalam query.
+    - **`pegawai`**: Ini adalah nama tabel yang menjadi sumber data untuk query ini. Dalam konteks ini, tabel `pegawai` berisi data pegawai, termasuk informasi seperti `NIP` dan `NoCab`.
+    
+3. **WHERE NoCab = 'C102'**
+    - **`WHERE`**: Klausa ini digunakan untuk menetapkan kondisi atau kriteria yang harus dipenuhi oleh data yang akan dipilih.
+    - **`NoCab = 'C102'`**: Kondisi ini berarti query hanya akan menghitung jumlah pegawai yang memiliki nilai `NoCab` (Nomor Cabang) sama dengan 'C102'. Jadi, hanya pegawai yang terdaftar di cabang dengan kode 'C102' yang akan dihitung.
+
+### Kesimpulan:
+- Query ini akan menghitung jumlah pegawai yang terdaftar di cabang dengan kode 'C102'. Hasil dari query ini adalah satu nilai yang menunjukkan jumlah pegawai yang berada di cabang tersebut, dan hasilnya akan ditampilkan dengan label `JumlahPegawai`.
+
+
+---
+
+```SQL
+SELECT NoCab, COUNT(NIP) AS Jumlah_Pegawai
+FROM pegawai
+GROUP BY NoCab
+HAVING COUNT(NIP) >= 3;
+
+```
+
+![[Asset/gambar 4.png]]
+
+1. **SELECT NoCab, COUNT(NIP) AS Jumlah_Pegawai**:
+    - **`SELECT`**: Klausa ini digunakan untuk memilih kolom-kolom yang ingin ditampilkan dalam hasil query.
+    - **`NoCab`**: Kolom `NoCab` (Nomor Cabang) dipilih untuk ditampilkan. Ini menunjukkan cabang mana yang sedang dihitung.
+    - **`COUNT(NIP) AS Jumlah_Pegawai`**: Fungsi `COUNT(NIP)` menghitung jumlah pegawai (`NIP` tidak `NULL`) di setiap cabang. Alias `Jumlah_Pegawai` digunakan untuk memberi nama kolom hasil perhitungan tersebut, sehingga hasil query akan menampilkan jumlah pegawai per cabang.
+    
+2.  **FROM pegawai**:
+    - **`FROM`**: Klausa ini menentukan tabel `pegawai` sebagai sumber data untuk query ini.
+    - Tabel `pegawai` berisi data pegawai, termasuk informasi tentang `NIP` dan `NoCab`.
+    
+3. **GROUP BY NoCab**:
+    - **`GROUP BY`**: Klausa ini mengelompokkan hasil query berdasarkan nilai yang unik di kolom `NoCab`. Dengan kata lain, semua baris dengan nilai `NoCab` yang sama akan dikelompokkan bersama.
+    - Setelah dikelompokkan, fungsi agregasi `COUNT(NIP)` akan diterapkan pada setiap kelompok, menghitung jumlah pegawai di setiap cabang (`NoCab`).
+    
+4.  **HAVING COUNT(NIP) >= 3**:
+    - **`HAVING`**: Klausa ini digunakan untuk menyaring hasil yang sudah dikelompokkan oleh `GROUP BY`.
+    - **`COUNT(NIP) >= 3`**: Kondisi ini berarti hanya kelompok (`NoCab`) yang memiliki 3 atau lebih pegawai (berdasarkan perhitungan `COUNT(NIP)`) yang akan ditampilkan dalam hasil akhir. Cabang dengan kurang dari 3 pegawai akan diabaikan.
+
+### Kesimpulan
+
+- **Tujuan Query**: Query ini bertujuan untuk menampilkan daftar cabang (`NoCab`) yang memiliki tiga atau lebih pegawai (`Jumlah_Pegawai`).
+    
+- **Fungsi `GROUP BY` dan `HAVING`**: `GROUP BY` digunakan untuk mengelompokkan data berdasarkan cabang (`NoCab`), dan `HAVING` menyaring hanya kelompok-kelompok yang memenuhi syarat, yaitu yang memiliki 3 atau lebih pegawai.
+    
+- **Hasil Akhir**: Hasil query akan menampilkan dua kolom: `NoCab` dan `Jumlah_Pegawai`. Setiap baris dalam hasil tersebut akan menunjukkan sebuah cabang yang memiliki 3 atau lebih pegawai, beserta jumlah pegawai di cabang tersebut.
+
+
+---
+
+```SQL
+
+```
